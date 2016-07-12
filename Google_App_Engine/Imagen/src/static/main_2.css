@@ -1,0 +1,188 @@
+@CHARSET "ISO-8859-1";
+
+html {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', 'Helvetica Neue', helvetica, arial, verdana,
+		sans-serif !important;
+	font-size: 12px;
+	font-weight: normal !important;
+	height: 100%;
+	min-height: 100%;
+	background-color:#E0E0E0
+}
+
+#header {
+	height: 26%;
+	width: 100%;
+	background: #499bea;
+	background: -moz-linear-gradient(top, #499bea 0%, #207ce5 100%);
+	background: -webkit-linear-gradient(top, #499bea 0%, #207ce5 100%);
+	background: linear-gradient(to bottom, #499bea 0%, #207ce5 100%);
+}
+
+#logoContainer {
+	margin-left: 16px;
+	height: 73%;
+	font-size: 70px;
+	color: #FFF;
+	padding: 10px;
+	/* font-family: 'Amethysta', serif; */
+}
+
+#logo {
+	text-shadow: 1px 1px grey;
+}
+
+.slogo {
+	cursor: pointer;
+	display: inline-block;
+	width: 44px;
+	height: 44px;
+	background-image: url('../images/sm.jpg');
+	background-repeat: no-repeat;
+	border-radius: 8px 8px;
+	margin-right: -12px;
+}
+
+#uploadForm {
+
+}
+
+#noImageDiv {
+	display:none;
+	text-align: center;
+    margin: 25px
+}
+
+label {
+	margin: 5px 0px 5px 0px;
+	padding: 5px 0px 5px 0px;
+}
+
+#upload_comment_textarea, .comment_textarea{
+	height: 11em;
+    width: 35em;
+    margin-bottom: 20px;
+}
+
+/* Browser table */
+#browserheader {
+	font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.file {
+	width: 225px;
+}
+
+.isize{
+	width: 110px;
+}
+
+.fversion {
+	text-align: center;
+}
+
+#files thead tr {
+	font-size: 14px;
+    font-weight: bold;
+}
+
+tr.spaceUnder > td
+{
+  padding-bottom: 0.4em;
+}
+
+.infoContainer {
+	font-size: 14px;
+    margin: 10px;
+    height: 30px;
+}
+
+.field {
+	margin-right: 5px;
+}
+
+.fieldName {
+	font-weight: bold;
+}
+
+.deleteButton {
+	color: #FFF;
+    text-align: center;
+    height: 25px;
+    width: 88px;
+    font-size: 14px;
+    background-color: #2E6CD8;
+    padding: 5px 0px 0px 0px;
+    -moz-border-radius: 10px 8px;
+    -webkit-border-radius: 3px 17px;
+    cursor: pointer;
+    display: inline;
+    float: right;
+}
+
+.image {
+	display: table-cell;
+	max-width: 730px;
+	min-width: 730px;;
+	height: 534px;
+	background-color:grey;
+	text-align:center;
+	vertical-align: middle;
+	overflow:auto;
+}
+
+.addCommentButton{
+	color: #FFF;
+    text-align: center;
+    height: 25px;
+    width: 120px;
+    font-size: 14px;
+    background-color: #2E6CD8;
+    padding: 5px 0px 0px 0px;
+    -moz-border-radius: 10px 8px;
+    -webkit-border-radius: 3px 17px;
+    cursor: pointer;
+    float: right;
+}
+
+.removeComment {
+	cursor:pointer;
+}
+
+.imageViewerContainer {
+	margin-left: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+    border-bottom: 1px solid black;
+}
+
+.commentSection {
+	margin-left: 20px;
+	display:inline-block;
+    vertical-align: top;
+}
+
+.commentBox {
+	border: 1px solid #CCC;
+    margin-bottom: 10px;
+}
+
+.commentUser {
+	margin-bottom: 5px;
+    background-color: #CCC;
+    height: 25px;
+    padding: 6px 0px 3px 5px;
+    font-weight: bold;
+}
+
+.commentData {
+	margin-bottom: 5px;
+    padding: 5px 5px 5px 5px;
+}

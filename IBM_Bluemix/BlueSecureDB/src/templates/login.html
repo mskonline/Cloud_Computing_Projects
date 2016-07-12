@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>BlueSecure Login page</title>
+<link rel="stylesheet"
+	href="{{url_for('static',filename='jquery-ui.min.css') }}" />
+<link rel="stylesheet" href="{{url_for('static',filename='main.css') }}" />
+<script type="text/javascript"
+	src="{{ url_for('static',filename='jquery.min.js') }}"></script>
+<script type="text/javascript"
+	src="{{url_for('static',filename='jquery-ui.min.js')}}"></script>
+<script type="text/javascript"
+	src="{{url_for('static',filename='login.js')}}"></script>
+</head>
+<body>
+	<div id="main">
+		<div id="header">
+			<div id="logoContainer">
+				<span id="logo">IBM BlueMix DB Storage</span>
+			</div>
+		</div>
+		<div id="container">
+			<div style="text-align:center; margin-top:130px" id="loginContainer">
+				<div style="margin: 10px;font-size: 20px;font-weight: bold;">Login</div>
+				<div style="margin: 10px;">Enter your user name</div>
+				<div style="margin: 10px;"><input type="text" id="username"/></div>
+				<div style="margin: 10px;">Enter your Password</div>
+				<div style="margin: 10px;"><input type="password" id="passwd"/></div>
+				<div style="margin: 30px;"><input style="width: 80px;height: 30px;cursor:pointer" type="button" id="loginBtn" value="Login"/></div>
+			</div>
+		</div>
+		<div id="footer"></div>
+	</div>
+</body>
+</html>

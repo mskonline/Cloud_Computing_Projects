@@ -1,0 +1,11 @@
+<form id="changeUserGroupForm" class="appnitro"
+	enctype="multipart/form-data" method="post" action="changeUserGroup">
+	<p> Select your new group : </p>
+	<div>
+		<select name="group">>
+			{% for g in data.groups%}
+				<option value="{{ g }}">{{ g }}</option>
+			{% endfor %}
+		</select>
+	</div>
+</form>

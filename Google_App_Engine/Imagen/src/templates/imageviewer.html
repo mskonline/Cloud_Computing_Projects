@@ -1,0 +1,26 @@
+<div id="imageViewerContainer">
+	<div id="image">
+		<img src="getImage?imageId={{imageData['imageid']}}" />
+	</div>
+	<div id="commentSection" style="display:inline-block">
+		<div id="commentText">
+			{% for imageComment in imageData['comments'] %}
+			<div id="commentBox">
+				<div id="commentUser">
+				{{ imageComment['username'] }}
+				{% if imageData['username'] == imageComment['username'] %}
+					<div style="float:right;margin-right: 5px;"><input class="removeComment" type="button" cid="{{imageComment['_id']}}" value="Delete"></div>
+				{% endif %}
+				</div>
+				<div id="commentData">
+				{{ imageComment['comment'] }}
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+		<textarea id="comment_textarea" name="description"></textarea>
+		<div>
+			<div class="addCommentButton">Add Comment</div>
+		</div>
+	</div>
+</div>

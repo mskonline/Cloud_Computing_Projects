@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Imagen</title>
+<link rel="stylesheet"
+	href="{{url_for('static',filename='jquery-ui.min.css') }}" />
+<link rel="stylesheet" href="{{url_for('static',filename='main_2.css') }}" />
+<script type="text/javascript"
+	src="{{ url_for('static',filename='jquery.min.js') }}"></script>
+<script type="text/javascript"
+	src="{{url_for('static',filename='jquery-ui.min.js')}}"></script>
+<script type="text/javascript"
+	src="{{url_for('static',filename='main_2.js')}}"></script>
+<script>
+	var user = "{{ data }}"
+</script>
+</head>
+<body>
+	<div id="main">
+		<div id="header">
+			<div id="logoContainer">
+				<span id="logo">Imagen</span>
+				<div style="position: absolute;top: 22px;right: 8px;">
+					<div style="font-size: 14px; display: inline;">Logged in as : <span id="loggerinUser"></span> of <span id="userGrp"></span></div>
+					<input id="changeGrpBtn" type="button" value="Change Group" style="width: 120px;height: 28px;font-family:inherit; cursor:pointer">
+					<input id="logoutBtn" type="button" value="Log out" style="width: 80px;height: 28px;font-family:inherit; cursor:pointer">
+				</div>
+			</div>
+		</div>
+		<div id="container">
+			<div style="margin: 20px;">
+				<div style="display:inline;font-size: 22px;">Images</div>
+				<div id="uploadButton" class="deleteButton" style="display:inline;float:right">Upload</div>
+				<hr style="margin-top: 12px;"></hr>
+			</div>
+			{% for image in images %}
+			<div class="imageViewerContainer">
+				<div class="infoContainer">
+					<span class="field"><span class="fieldName">Name : </span><span> {{ image['name']}} </span></span>
+					<span class="field"><span class="fieldName">Group : </span><span> {{ image['group']}} </span></span>
+					<span class="field"><span class="fieldName">Uploaded time : </span><span> {{ image['uploadtime']}} </span></span>
+					<span class="field"><span class="fieldName">Format : </span><span> {{ image['format']}} </span></span>
+					<span><div class="deleteButton" imgId="{{image['imageid']}}">Delete</div></span>
+				</div>
+				<div class="imageContainer">
+					<div style="display:inline-block">
+						<div class="image">
+							<img src="getImage?imageId={{image['imageid']}}" />
+						</div>
+					</div>
+					<div class="commentSection" style="display:inline-block">
+						<div class="commentText">
+							{% for imageComment in image['comments'] %}
+							<div class="commentBox">
+								<div class="commentUser">
+								{{ imageComment['username'] }}
+								{% if image['username'] == imageComment['username'] %}
+									<div style="float:right;margin-right: 5px;"><input class="removeComment" type="button" cid="{{imageComment['_id']}}" value="Delete"></div>
+								{% endif %}
+								</div>
+								<div class="commentData">
+								{{ imageComment['comment'] }}
+								</div>
+							</div>
+							{% endfor %}
+						</div>
+						<textarea class="comment_textarea" name="comment"></textarea>
+						<div>
+							<div imageid="{{ image['imageid']}}" class="addCommentButton">Add Comment</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+		<div id="footer"></div>
+	</div>
+</body>
+</html>

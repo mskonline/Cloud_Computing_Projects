@@ -1,0 +1,26 @@
+<form id="imageUploadForm" enctype="multipart/form-data" method="post" action="upload">
+	<p> Subject : </p>
+	<div>
+		<input style="width:99%"type="text" name="subject"/>
+	</div>
+	<p> Select your Image : </p>
+	<div>
+		<input id="fileInput" name="file" type="file" />
+	</div>
+	<p> Set Priority :</p>
+	<div>
+		<select name="priority" style="width:25%">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+		</select>
+	</div>
+	<p style="margin-top: 20px;"> Comment : </p>
+	<div>
+		<textarea id="upload_comment_textarea" name="comment"></textarea>
+	</div>
+	<input type="hidden" name="size" value="" />
+	<input type="hidden" name="contenttype" value="img" />
+</form>

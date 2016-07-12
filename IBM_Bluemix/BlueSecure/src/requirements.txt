@@ -1,0 +1,5 @@
+Flask==0.10.1
+pycrypto
+simple-crypt
+python-swiftclient
+python-keystoneclient

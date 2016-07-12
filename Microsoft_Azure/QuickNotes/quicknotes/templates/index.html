@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Quick Notes</title>
+<link rel="stylesheet"
+	href="{{url_for('static',filename='jquery-ui.min.css') }}" />
+<link rel="stylesheet" href="{{url_for('static',filename='main.css') }}" />
+<script type="text/javascript"
+	src="{{ url_for('static',filename='jquery.min.js') }}"></script>
+<script type="text/javascript"
+	src="{{url_for('static',filename='jquery-ui.min.js')}}"></script>
+<script type="text/javascript"
+	src="{{url_for('static',filename='main.js')}}"></script>
+<script>
+	var user = "{{ data }}"
+</script>
+</head>
+<body>
+	<div id="main">
+		<div id="header">
+			<div id="logoContainer">
+				<span id="logo">Quick Notes</span>
+				<div style="position: absolute;top: 22px;right: 8px;">
+					<div style="font-size: 14px; display: inline;">Logged in as : <span id="loggerinUser"></span>
+					<input id="logoutBtn" type="button" value="Log out" style="width: 80px;height: 28px;font-family:inherit; cursor:pointer">
+				</div>
+			</div>
+		</div>
+		<div id="container">
+			<div id="fileList">
+				<div>
+					<div style="display:inline;font-size: 22px;">Notes</div>
+					<div style="display:inline;float:right">
+						<div style="display:inline;">Upload : </div>
+						<div id="uploadImageButton" class="deleteButton" style="display:inline-block;">Image</div>
+						<div id="uploadNoteButton" class="deleteButton" style="display:inline-block;">Note</div>
+					</div>
+					<hr style="margin-top: 12px;"></hr>
+				</div>
+				<div style="margin-bottom: 20px; margin-top: 20px; text-align:center">
+					<span style="margin-right: 20px;font-weight:bold">Search:</span>
+					<span>
+						Subject: <input id="subjectText" type="text" name="imgName" style="margin-right: 15px;">
+						<input type="button" id="searchButton" value="Search" style="cursor:pointer">
+					</span>
+					<span style="margin-right: 20px;margin-left: 20px;font-weight:bold">Sort:</span>
+					<span>
+						By : <select id="sortOpts">
+							<option value="subject">Subject</option>
+							<option value="contenttype">Type</option>
+							<option value="priority">Priority</option>
+							<option value="size">Size</option>
+							<option value="created">Creation Time</option>
+						</select>
+						Order : <select id="orderOpts"><option value="asc">Ascending</option><option value="desc">Descending</option></select>
+						<input type="button" id="sortButton"value="Sort" style="cursor:pointer;;margin-left: 15px;width: 64px;">
+					</span>
+				</div>
+				<div id="loadingDiv"></img></div>
+				<div id="noImageDiv">No Notes found. Upload one...</div>
+				<table id="files" style="display:none;width: 100%" cellspacing="0">
+					<thead>
+						<tr>
+							<td>Subject</td>
+							<td>Type</td>
+							<td>Priority</td>
+							<td>Size</td>
+							<td>Creation Time</td>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div id="footer"></div>
+	</div>
+</body>
+</html>

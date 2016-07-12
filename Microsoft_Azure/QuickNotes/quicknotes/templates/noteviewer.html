@@ -1,0 +1,12 @@
+<div id="noteViewerContainer">
+	{% if contenttype == 'img' %}
+		<div id="image">
+			<img src="getImage?dataid={{dataId}}" />
+		</div>
+	{% endif %}
+	{% if contenttype == 'txt' %}
+		<div id="note">
+			<p>{{data}}</p>
+		</div>
+	{% endif %}
+</div>

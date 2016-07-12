@@ -1,0 +1,4 @@
+./mysql-connector
+Flask==0.10.1
+pycrypto
+simple-crypt
