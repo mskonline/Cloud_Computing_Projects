@@ -33,8 +33,8 @@ On AWS, a variety of topics were covered
  - Analysing performance of queries with Memcached
 - Performing Data analytics 
  - Hadoop Map-Reduce
-   - On single Instance
-   - On multi Instances
+    - On single Instance
+    - On multi Instances
  - K-Means Clustering
  - Visualizing in Javascript charting tools
 
