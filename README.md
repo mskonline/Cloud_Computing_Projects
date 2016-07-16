@@ -7,7 +7,7 @@ explore the features they offer.
 
 List of cloud providers covered :
 
-- IBM'd Bluemix
+- IBM's Bluemix
 - Amazon's AWS
 - Google's App Engine
 - Microsoft's Azure
