@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Data Clustering</title>
+<link rel="stylesheet"
+	href="{{url_for('static',filename='jquery-ui.min.css') }}" />
+<link rel="stylesheet" href="{{url_for('static',filename='main.css') }}" />
+<script type="text/javascript"
+	src="{{ url_for('static',filename='jquery.min.js') }}"></script>
+<script type="text/javascript"
+	src="{{url_for('static',filename='jquery-ui.min.js')}}"></script>
+<script type="text/javascript"
+	src="{{url_for('static',filename='main.js')}}"></script>
+</head>
+<body>
+	<div id="main">
+		<div id="header">
+			<div id="logoContainer">
+				<span id="logo">Data Clustering</span>
+			</div>
+		</div>
+		<div id="container">
+			<div id="tabs">
+				<ul>
+					<li><a href="#fragment-1">Welcome</a></li>
+					<li><a href="#fragment-2">Upload</a></li>
+				</ul>
+				<div id="fragment-1">
+				</div>
+				<div id="fragment-2">
+					<div id="uploadForm">
+						<form id="fileUploadForm" class="appnitro"
+							enctype="multipart/form-data" method="post" action="doCustomCluster">
+							
+							<p> Select your file : </p>
+							<div>
+								<input id="fileInput" name="file" type="file" />
+							</div>
+							<p> Number of clusters : </p>
+							<div>
+								<input id="numClusters" name="numClusters" type="text" />
+							</div>
+							<p> Column 1 : </p>
+							<div>
+								<input id="col1" name="col1" type="text" />
+							</div>
+							<p> Column 2 : </p>
+							<div>
+								<input id="col2" name="col2" type="text" />
+							</div>
+							
+							<input id="saveForm" class="button_text"
+								type="submit" name="submit" value="Cluster it" />
+						</form>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div id="footer"></div>
+	</div>
+</body>
+</html>

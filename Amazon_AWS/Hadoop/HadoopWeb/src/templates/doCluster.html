@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Clustering</title>
+		<link rel="stylesheet" href="{{url_for('static',filename='main.css') }}" />
+		<script>
+			var qdata = "{{ jsdata }}"
+			var url = '/doCluster';
+			var cdata = {};
+			var rmethod = 'POST';
+		</script>
+		<script type="text/javascript"
+			src="{{ url_for('static',filename='jquery.min.js') }}"></script>
+		<script type="text/javascript"
+			src="{{url_for('static',filename='highcharts.js')}}"></script>
+		<script type="text/javascript"
+			src="{{url_for('static',filename='highcharts-more.js')}}"></script>
+		<script type="text/javascript"
+			src="{{url_for('static',filename='charts.js')}}"></script>
+	</head>
+	<body>
+		<div id="main">
+			<div id="header">
+				<div id="logoContainer">
+					<span id="logo">Data Clustering</span>
+				</div>
+			</div>
+		<div id="container" style="margin-top:20px">
+			<div id="scatterChartContainer"></div>
+			<div id="barChartContainer" style="margin-top:30px;margin-bottom:30px"></div>
+			<div id="bubbleChartContainer" style="margin-top:30px;margin-bottom:30px"></div>
+		</div>
+		</div>
+	</body>
+</html>
