@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Web Query</title>
+<link rel="stylesheet"
+	href="{{url_for('static',filename='jquery-ui.min.css') }}" />
+<link rel="stylesheet" href="{{url_for('static',filename='webquery.css') }}" />
+<script type="text/javascript"
+	src="{{ url_for('static',filename='jquery.min.js') }}"></script>
+<script type="text/javascript"
+	src="{{url_for('static',filename='jquery-ui.min.js')}}"></script>
+<script type="text/javascript"
+	src="{{url_for('static',filename='webquery.js')}}"></script>
+</head>
+<body>
+	<div id="main">
+		<div id="header">
+			<div id="logoContainer">
+				<span id="logo">Web Query</span>
+			</div>
+		</div>
+		<div id="container">
+			<textarea id="queryText" name="queryText"></textarea>
+			<div style="float: right;margin-right: 25px;">
+				<div id="clearBtn"><span class="btnText">Clear</span></div>
+				<div id="executeBtn"><span class="btnText">Execute</span></div>
+			</div>
+			<div id="rmessage"></div>
+			<div>
+				<div id="loadingDiv"></div>
+				<div id="tableDiv">
+					<table id="resultsTable" cellpadding="5">
+						<thead>
+						</thead>
+						<tbody>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			
+		</div>
+		<div id="footer"></div>
+	</div>
+</body>
+</html>

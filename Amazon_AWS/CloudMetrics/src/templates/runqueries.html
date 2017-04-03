@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>EC2 File Upload and Table modifications</title>
+<link rel="stylesheet"
+	href="{{url_for('static',filename='jquery-ui.min.css') }}" />
+<link rel="stylesheet" href="{{url_for('static',filename='main.css') }}" />
+<script type="text/javascript"
+	src="{{ url_for('static',filename='jquery.min.js') }}"></script>
+<script type="text/javascript"
+	src="{{url_for('static',filename='jquery-ui.min.js')}}"></script>
+<script type="text/javascript"
+	src="{{url_for('static',filename='main.js')}}"></script>
+</head>
+<body>
+	<div id="main">
+		<div id="header">
+			<div id="logoContainer">
+				<span id="logo">query</span>
+			</div>
+		</div>
+		<div id="container">
+			<div id="tabs">
+				<ul>
+					<li><a href="#fragment-1">Run queries</a></li>
+				</ul>
+				<div id="fragment-1">
+					<div id="uploadForm">
+						<form id="fileUploadForm" class="appnitro"
+							enctype="multipart/form-data" method="post" action="execquery">
+							<div style="margin-bottom:10px">Name : <input id="fileInput" name="fieldName" type="text" /> </div>
+							<div style="margin-bottom:10px">Clause 1: <input id="cclause1" name="cclause1" type="text" /></div>
+							<div style="margin-bottom:10px">Clause 2: <input id="cclause2" name="cclause2" type="text" /></div>
+							<div style="margin-bottom:10px">With Memcache <input id="withMem" name="withmem" type="text" /></div>
+							<input id="runquery" class="button_text"
+								type="submit" name="submit" value="Run" />
+						</form>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div id="footer"></div>
+	</div>
+</body>
+</html>

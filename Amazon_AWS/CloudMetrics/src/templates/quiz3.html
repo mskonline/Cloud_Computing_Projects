@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>EC2 File Upload and Table modifications</title>
+<link rel="stylesheet"
+	href="{{url_for('static',filename='jquery-ui.min.css') }}" />
+<link rel="stylesheet" href="{{url_for('static',filename='main.css') }}" />
+<script type="text/javascript"
+	src="{{ url_for('static',filename='jquery.min.js') }}"></script>
+<script type="text/javascript"
+	src="{{url_for('static',filename='jquery-ui.min.js')}}"></script>
+<script type="text/javascript"
+	src="{{url_for('static',filename='main.js')}}"></script>
+</head>
+<body>
+	<div id="main">
+		<div id="header">
+			<div id="logoContainer">
+				<span id="logo">EC2 File Upload</span>
+			</div>
+		</div>
+		<div id="container">
+			<div id="tabs">
+				<ul>
+					<li><a href="#fragment-1">Upload</a></li>
+				</ul>
+				<div id="fragment-2">
+					<div style="font-size:14px;margin-top: 30px;">
+						<div> Last Name : Manakan </div>
+						<div> Last 4 digit ID : 6131 </div>
+						<div> Class Section : 10:30 AM </div>
+					</div>
+					<div id="uploadForm">
+						<form id="fileUploadForm" class="appnitro"
+							enctype="multipart/form-data" method="post" action="fileupload">
+							<div class="form_description">
+								<h2>Upload File to Server</h2>
+								<p></p>
+							</div>
+							<p> Select your file : </p>
+							<div>
+								<input id="fileInput" name="file" type="file" />
+							</div>
+							<p> Description : </p>
+							<div>
+								<textarea id="desp_textarea" name="description"></textarea>
+							</div>
+							<input type="hidden" name="form_id"
+								value="1137282" />
+							<input type="hidden" name="uploadTime" value="" />
+							<input id="saveForm" class="button_text"
+								type="submit" name="submit" value="Upload File" />
+						</form>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<div id="footer"></div>
+	</div>
+</body>
+</html>
