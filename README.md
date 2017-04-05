@@ -1,6 +1,6 @@
 # Cloud Computing Projects
 
-##Introduction
+## Introduction
 
 As part of **CS 6331 - Advance Topics in Database**, we were introduced to various cloud providers in the market and
 explore the features they offer.
@@ -12,7 +12,7 @@ List of cloud providers covered :
 - Google's App Engine
 - Microsoft's Azure
 
-###IBM's Bluemix
+### IBM's Bluemix
 
 On Bluemix
 
@@ -21,7 +21,7 @@ On Bluemix
 - ClearDB: Utilizing MySQL database
 
 
-###Amazon's AWS
+### Amazon's AWS
 
 On AWS, a variety of topics were covered
 
@@ -38,7 +38,7 @@ On AWS, a variety of topics were covered
  - K-Means Clustering
  - Visualizing in Javascript charting tools
 
-###Google's App Engine
+### Google's App Engine
 
 On App Engine, the following tasks were taken up:
 
@@ -46,7 +46,7 @@ On App Engine, the following tasks were taken up:
 - NoSQL: Configuring MongoDB Instances
 - JMeter: Stress testing the app 
  
-###Microsoft's Azure
+### Microsoft's Azure
 
 On Azure, the following were exercised:
 
