@@ -27,4 +27,14 @@ python main.py
 * Google App Engine
 
 ## Screenshots
+Login Page
 ![Imagen Login page](./Imagen/screenshots/Login_page.png?raw=true "Imagen Login page")
+
+Home Page
+![Imagen Home page](./Imagen/screenshots/Home_page.png?raw=true "Imagen Home page")
+
+Image Upload Page
+![Imagen Image Upload page](./Imagen/screenshots/Upload_page.png?raw=true "Imagen Image Upload page")
+
+Image Viewer
+![Imagen Image viewer](./Imagen/screenshots/Image_viewer.png?raw=true "Imagen Login page")
