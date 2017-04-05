@@ -7,6 +7,7 @@ from MongoDB
 
 * Check out the directory
 * Make sure you have python 2.7 installed
+* Install MongoDB in your system
 * Run the following to install dependencies
 ```
 pip install -r requirements.txt
